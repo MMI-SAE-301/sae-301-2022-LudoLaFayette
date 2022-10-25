@@ -25,6 +25,13 @@
         </router-link>
       </li>
     </ul>
+    <ul>
+      <li>
+        <router-link class="text-red-600 underline" to="/testmontrevue">
+          <code class="font-mono">Vue de la montre seule</code>
+        </router-link>
+      </li>
+    </ul>
   </nav>
 
   <!-- Affiche les pages -->
