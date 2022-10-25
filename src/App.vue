@@ -32,6 +32,20 @@
         </router-link>
       </li>
     </ul>
+    <ul>
+      <li>
+        <router-link class="text-red-600 underline" to="/formmontrevue">
+          <code class="font-mono">Créer une montre</code>
+        </router-link>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <router-link class="text-red-600 underline" to="/montre">
+          <code class="font-mono">Voir les créations</code>
+        </router-link>
+      </li>
+    </ul>
   </nav>
 
   <!-- Affiche les pages -->

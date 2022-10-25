@@ -2,9 +2,9 @@
 import type { Montre } from "@/types"
 
 withDefaults(defineProps<Montre>(), {
-    ecran: "green",
-    boitier: "red",
-    bracelet: "blue",
+    ecran: "white",
+    boitier: "white",
+    bracelet: "white",
 });
 </script>
 <template>

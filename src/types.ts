@@ -20,15 +20,23 @@ export const colors = {
 };
 export const materiaux = [
   {
-    value: "/images/image-22.png",
+    value: "/images/cuir.jpg",
     label: "Cuir",
   },
   {
-    value: "/images/image-1.png",
-    label: "Tissu",
+    value: "/images/acier.jpg",
+    label: "Acier",
   },
   {
-    value: "/images/image-3.png",
-    label: "Synthétique",
+    value: "/images/cuivre.jpg",
+    label: "Cuivre",
+  },
+  {
+    value: "/images/or.jpg",
+    label: "Or",
+  },
+  {
+    value: "/images/plastique.jpg",
+    label: "Plastique",
   },
 ];
