@@ -7,7 +7,7 @@ import { supabase, user } from '../supabase';
         Se déconnecter ({{user.email}})
     </button>
     <button v-else @pointerdown="supabase.auth.signIn({provider: 'facebook'})">
-        Se connecter avec Github
+        Se connecter avec Facebook
     </button>
 </div>
 </template>   

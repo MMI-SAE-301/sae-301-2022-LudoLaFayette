@@ -7,8 +7,21 @@
     <ul>
       <li>
         <router-link class="text-red-600 underline" to="/">
-          lien vers
-          <code class="font-mono">/src/pages/index.vue</code>
+          <code class="font-mono">Acceuil</code>
+        </router-link>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <router-link class="text-red-600 underline" to="/logingooglevue">
+          <code class="font-mono">Se connecter avec Google</code>
+        </router-link>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <router-link class="text-red-600 underline" to="/loginfacebookvue">
+          <code class="font-mono">Se connecter avec Facebook</code>
         </router-link>
       </li>
     </ul>
