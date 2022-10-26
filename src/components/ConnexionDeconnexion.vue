@@ -50,22 +50,22 @@ import { supabase, user } from '../supabase';
         <div>
 
             <div class="grid grid-cols-3 justify-items-center">
-            <div class="mr-[-500px] mt-[20px]">
-                <img src="/images/OuLine.svg" alt="ligne OU" />
+                <div class="mr-[-500px] mt-[20px]">
+                    <img src="/images/OuLine.svg" alt="ligne OU" />
+                </div>
+                <div class="font-light text-[35px] text-center ">
+                    <p>Ou</p>
+                </div>
+                <div class="ml-[-500px] mt-[20px]">
+                    <img src="/images/OuLine.svg" alt="ligne OU" />
+                </div>
             </div>
-            <div class="font-light text-[35px] text-center ">
-                <p>Ou</p>
-            </div>
-            <div class="ml-[-500px] mt-[20px]">
-                <img src="/images/OuLine.svg" alt="ligne OU" />
-            </div>
-        </div>
 
         </div>
         <div class="flex items-center justify-center p-8">
-            <button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
+            <router-link to="/inscriptionvue"><button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
                 S'inscrire
-            </button>
+            </button></router-link>
         </div>
 
         <div class="grid grid-cols-3 justify-items-center">
