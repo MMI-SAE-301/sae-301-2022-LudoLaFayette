@@ -98,8 +98,6 @@ async function deleteMontre() {
                             }" input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
                                 <div class="h-12 w-12 rounded-full border-2 peer-checked:border-red-600"
                                     :style="{ backgroundImage: `url('${context.option.value}')` }"></div>
-                                <!-- :style="{backgroundImage: `url(${context.option.value})` }"
-                    style="background-image:url('/images/image\ 22.png')" -->
                                 <span class="sr-only">{{ context.option.label }}</span>
                             </template>
                         </FormKit>
@@ -129,10 +127,8 @@ async function deleteMontre() {
                         
                        
                     </div>
-                </div>
-                
-                
-            </FormKit>
+                </div>          
+                </FormKit>
             <div class="p-5 flex justify-end items-end">
                     <button class="bg-bkg-main-dark font-orkney font-bold text-common p-5 text-white" @click="deleteMontre()">Annuler</button>
                 </div>

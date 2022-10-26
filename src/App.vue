@@ -8,7 +8,7 @@
       <nav class="font-aquire flex items-center gap-10">
         <router-link to="/" class="text-white text-common">Acceuil</router-link>
         <router-link to="/formmontrevue" class="bg-white text-black text-common p-2">Personnalisation</router-link>
-        <router-link to="/" class="bg-white text-black text-common mr-10 p-2">Connexion</router-link>
+        <router-link to="/connexiondeconnexionvue" class="bg-white text-black text-common mr-10 p-2">Connexion</router-link>
       </nav>
     </div>
   </header>
