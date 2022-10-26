@@ -14,7 +14,7 @@
   </header>
 
   <main class="bg-main-pattern">
-    <nav>
+    <!-- <nav>
 
       <ul>
         <li>
@@ -58,7 +58,7 @@
           </router-link>
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
     <!-- Affiche les pages -->
     <Suspense>
