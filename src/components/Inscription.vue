@@ -71,7 +71,7 @@
             </div>
         </form>       
         <div class="flex items-center justify-center p-8">
-            <router-link to="/"><button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
+            <router-link to="/montre"><button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
                 S'inscrire
             </button></router-link>
         </div>
