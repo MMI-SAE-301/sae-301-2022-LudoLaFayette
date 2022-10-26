@@ -16,6 +16,9 @@ module.exports = {
       },
       "backgroundImage": {
         "main-pattern" : "url('/images/background-main.jpg')",
+      },
+      "fontSize" : {
+        "common" : "25px",
       }
     },
   },
