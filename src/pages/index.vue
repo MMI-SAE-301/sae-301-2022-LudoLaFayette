@@ -27,8 +27,19 @@
     <h2 class="font-orkney italic font-medium text-common text-right ml-[-30px] mt-3">Personnalisation</h2>
   </div>
 
-  <div class="grid grid-cols-2 justify-items-center p-10">
-    <img src="images/items.webp" alt="ensemble de items électroniques" height="175" width="500" />
+  <div class="grid grid-cols-2 justify-items-center p-10 mb-[-200px]">
+    <div class="grid grid-rows-2 justify-items-center p-8">
+      <img src="images/items.webp" alt="ensemble de items électroniques" height="175" width="500" />
+      <div class="">
+        <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 ">
+          Personnaliser
+        </button>
+      </div>
+
+    </div>
+
+
+
     <div class="font-orkney font-light text-center text-common items-center  p-5 ">
       <p class="mb-5">
         Votre montre à votre image.<br />
@@ -57,10 +68,47 @@
 
   </div>
 
-  <div class="grid grid-cols-4 bg-">
+  <div class="grid grid-cols-4 bg-blancFond bg-opacity-60 justify-items-center p-20 ">
+    <div>
+      <img src="/images/chevron-left.svg" alt="fleche gauche">
+    </div>
+    <div>
+      <img src="/images/exempleMontre1.svg" alt="montre1">
+    </div>
+    <div>
+      <img src="/images/exempleMontre2.svg" alt="montre2">
+    </div>
+    <div>
+      <img src="/images/chevron-right.svg" alt="fleche droite">
+    </div>
 
   </div>
 
+  <div class="grid grid-cols-2 p-5 mt-6">
+    <h2 class="font-orkney italic font-medium text-common text-center">Connexion</h2>
+    <div class="mt-5">
+      <img src="/images/line2.svg" alt="ligne2">
+    </div>
+  </div>
 
+  <div class="grid grid-cols-2 justify-items-center p-10 mb-[-20px]">
+    <div class="font-orkney font-light text-center text-common  ">
+      <p class="mb-5">
+        Vous voulez customiser pas une seule montre, mais plusieurs dans le futur ?<br />
+      </p>
+      <p class="mb-5">
+        Créez un compte dès aujourd’hui afin de bénéficier de l’enregistrement de plusieurs montres sur le long terme.
+      </p>
+    </div>
+    <div class="grid grid-rows-2 justify-items-center mb-[-200px]">
+      <img src="images/connexion.png" alt="connexion" height="300" width="425" />
+      <div class="">
+        <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 ">
+          Se connecter
+        </button>
+      </div>
+    </div>
+    
+  </div>
 
 </template>
