@@ -26,7 +26,7 @@ async function upsertMontre(dataForm, node) {
     if (error || !data) node.setErrors([error.message]);
     else {
         node.setErrors([]);
-        router.push({ name: "montre-edit-id", params: { id: data[0].id_chaussure } });
+        router.push({ name: "montre", params: { id: data[0].id_montre } });
     }
 }
 
@@ -50,6 +50,10 @@ async function deleteMontre() {
 }
 </script>
 <template>
+
+
+
+
     <div>
         <TestMontre v-bind="montre"/>
         <FormKit type="form" v-model="montre" @submit="upsertMontre">
@@ -57,7 +61,7 @@ async function deleteMontre() {
             <FormKitListColors name="ecran" label="ecran" />
             <FormKitListColors name="boitier" label="boitier" />
             <FormKitListColors name="bracelet" label="bracelet" />
-            <FormKit label="materiaux" type="radio" :options="materiaux" :sections-schema="{
+            <FormKit  label="materiaux (fonctionne pas)" type="radio" :options="materiaux" :sections-schema="{
                 inner: {$el:null},
                 decorator: {$el:null}
             } " input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
@@ -72,7 +76,7 @@ async function deleteMontre() {
             <FormKit name="commande_montre" type="checkbox" label="commander ? " wrapper-class="w-full flex text-xl" />
             <!-- <FormKit name="date_basket" type="date" label="date de commande" wrapper-class="w-full flex text-xl" /> -->
 
-            <button @click="deleteMontre()">Supp</button>
+            <button class="bg-bkg-dark-main" @click="deleteMontre()">Supp</button>
         </FormKit>
     </div>
 </template>
