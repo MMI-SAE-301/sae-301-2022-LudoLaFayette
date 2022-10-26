@@ -17,7 +17,7 @@ import { supabase, user } from '../supabase';
 
 
 
-    <div class="bg-blancFond bg-opacity-60 grid grid-rows-[7] font-orkney mt-[200px] ml-[200px] mr-[200px] pb-[-100px]">
+    <div class="bg-blancFond bg-opacity-60 grid grid-rows-[7] font-orkney mt-[50px] ml-[200px] mr-[200px] pb-[-100px]">
         <p class="font-light text-common p-4">Veuillez renseigner ces champs : </p>
         <form action="#" method="post" class="grid justify-items-start">
             <div class="p-5">
@@ -60,7 +60,7 @@ import { supabase, user } from '../supabase';
                 <img src="/images/OuLine.svg" alt="ligne OU" />
             </div>
         </div>
-        
+
         </div>
         <div class="flex items-center justify-center p-8">
             <button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
