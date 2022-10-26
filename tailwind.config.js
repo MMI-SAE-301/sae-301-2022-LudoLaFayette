@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       "colors": {
         "bkg-main-dark": "#1C1917",
-
+        "blancFond" : "#E6E9EE",
         // Ici vos couleurs exportées de Figma
       },
       "fontFamily": {
