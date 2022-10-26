@@ -10,6 +10,7 @@ import { supabase } from "../supabase";
 const router = useRouter();
 const montre = ref<Montre>({});
 const props = defineProps(["id"]);
+
 if (props.id) {
     // On charge les données de la basket
     let { data, error } = await supabase
@@ -62,91 +63,85 @@ async function deleteMontre() {
 
 
 
-
-    <div class="grid grid-cols-2 grid-rows-2">
-        <div>
-            <TestMontre />
+    <!--Changement d'intégration suite à que Formkit ne permet pad de spliter les options librement, ou que cela est possible mais très dur. => erreur de maquetteage après surprise du FormKit-->
+    <div class="grid grid-cols-2 p-10 mb-[-50px]">
+        <div class="p-10">
+            <TestMontre v-bind="montre" />
         </div>
-        <div>
+        <div class="grid ">
+        <FormKit type="form" v-model="montre" @submit="upsertMontre" submit-label="Enregistrer"
+                :submit-attrs="{ classes: { input: 'bg-bkg-main-dark font-orkney font-bold text-white text-common p-3 ' } }">
+                <div class="grid grid-rows-5 font-orkney text-[40px] font-bold gap-10 p-2">
+                    <div class="mr-[300px] mt-[105px]">
+                        <h2 class="font-orkney  text-[38px] text-right font-bold ">1. Choix des Couleurs :</h2>
+                    </div>
 
-            <h2 class="font-orkney italic text-[40px] text-right font-bold mr-[300px] ">1. Choix des Couleurs :</h2>
+                    <div class=" bg-blancFond bg-opacity-60 p-5 ">
+                        <FormKitListColors name="ecran" label="Ecran :" />
+                    </div>
+                    <div class="bg-blancFond bg-opacity-60 p-5">
+                        <FormKitListColors name="boitier" label="Boitier :" />
+                    </div>
+                    <div class="bg-blancFond  bg-opacity-60 p-5">
+                        <FormKitListColors name="bracelet" label="Bracelet :" />
+                    </div>
+                    <div class="mr-[260px]">
+                        <h2 class="font-orkney text-[38px] text-right font-bold  ">2. Choix des Materiaux :
+                    </h2>
+                    </div>                  
 
-            <FormKit type="form" v-model="montre" @submit="upsertMontre">
-                <!-- <FormKit name="libelle_montre" label="libellé" /> -->
-                <FormKitListColors name="ecran" label="ecran" />
-                <FormKitListColors name="boitier" label="boitier" />
-                <FormKitListColors name="bracelet" label="bracelet" />
-                <FormKit label="materiaux (fonctionne pas)" type="radio" :options="materiaux" :sections-schema="{
-                    inner: { $el: null },
-                    decorator: { $el: null }
-                }" input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
-                        <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                            :style="{ backgroundImage: `url('${context.option.value}')` }"></div>
-                        <!-- :style="{backgroundImage: `url(${context.option.value})` }"
+                    <div class="bg-blancFond font-orkney bg-opacity-60 text-[40px] font-bold p-5 mt-[-115px]">
+                        <FormKit label="Materiaux (fonctionne pas) :" type="radio" :options="materiaux"
+                            :sections-schema="{
+                                inner: { $el: null },
+                                decorator: { $el: null }
+                            }" input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
+                                <div class="h-12 w-12 rounded-full border-2 peer-checked:border-red-600"
+                                    :style="{ backgroundImage: `url('${context.option.value}')` }"></div>
+                                <!-- :style="{backgroundImage: `url(${context.option.value})` }"
                     style="background-image:url('/images/image\ 22.png')" -->
-                        <span class="sr-only">{{ context.option.label }}</span>
-                    </template>
-                </FormKit>
+                                <span class="sr-only">{{ context.option.label }}</span>
+                            </template>
+                        </FormKit>
+                    </div>
+                    <div class="mr-[500px]">
+                        <h2 class="font-orkney text-[38px] text-right font-bold  ">3. Détails :
+                    </h2>
+                    </div>
 
-                <FormKit name="commande_montre" type="checkbox" label="commander ? "
-                    wrapper-class="w-full flex text-xl" />
-                <!-- <FormKit name="date_basket" type="date" label="date de commande" wrapper-class="w-full flex text-xl" /> -->
+                    <div class="grid grid-rows-4 gap-5 mb-[-50px]">
+                        
+                        
+                        <div class=" bg-blancFond bg-opacity-60  p-5 ">
+                            <FormKit name="libelle_montre" label="Nom de la montre :" />
+                        </div>
 
-                <button class="bg-bkg-dark-main" @click="deleteMontre()">Supp</button>
+                        <div class=" bg-blancFond  bg-opacity-60 p-5 ">
+                            <FormKit name="taille_poignet" label="Taille de votre poignet (entre 14 et 18 cm) :"  />
+                        </div>                       
+                        <div class="p-5 ">
+                            <FormKit name="date_montre" type="date" label="Date de commande :" wrapper-class="w-full flex bg-opacity-60 bg-blancFond gap-5 text-common p-8" />
+                        </div>
+                        <div class="p-2 mr-[350px] ">
+                            <FormKit name="commande_montre" type="checkbox" label="Valider ma commande ? "
+                        wrapper-class="flex p-2 text-common gap-5 bg-bkg-main-dark text-white"/>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+                
+                
             </FormKit>
-        </div>
-
-        <div>
-            <FormKit type="form" v-model="montre" @submit="upsertMontre">
-                <!-- <FormKit name="libelle_montre" label="libellé" /> -->
-                <FormKitListColors name="ecran" label="ecran" />
-                <FormKitListColors name="boitier" label="boitier" />
-                <FormKitListColors name="bracelet" label="bracelet" />
-                <FormKit label="materiaux (fonctionne pas)" type="radio" :options="materiaux" :sections-schema="{
-                    inner: { $el: null },
-                    decorator: { $el: null }
-                }" input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
-                        <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                            :style="{ backgroundImage: `url('${context.option.value}')` }"></div>
-                        <!-- :style="{backgroundImage: `url(${context.option.value})` }"
-                    style="background-image:url('/images/image\ 22.png')" -->
-                        <span class="sr-only">{{ context.option.label }}</span>
-                    </template>
-                </FormKit>
-
-                <FormKit name="commande_montre" type="checkbox" label="commander ? "
-                    wrapper-class="w-full flex text-xl" />
-                <!-- <FormKit name="date_basket" type="date" label="date de commande" wrapper-class="w-full flex text-xl" /> -->
-
-                <button class="bg-bkg-dark-main" @click="deleteMontre()">Supp</button>
-            </FormKit>
-        </div>
-        <div>
-            <TestMontre />
+            <div class="p-5 flex justify-end items-end">
+                    <button class="bg-bkg-main-dark font-orkney font-bold text-common p-5 text-white" @click="deleteMontre()">Annuler</button>
+                </div>
         </div>
     </div>
 
+   
 
-    <FormKit type="form" v-model="montre" @submit="upsertMontre">
-        <!-- <FormKit name="libelle_montre" label="libellé" /> -->
-        <FormKitListColors name="ecran" label="ecran" />
-        <FormKitListColors name="boitier" label="boitier" />
-        <FormKitListColors name="bracelet" label="bracelet" />
-        <FormKit label="materiaux (fonctionne pas)" type="radio" :options="materiaux" :sections-schema="{
-            inner: { $el: null },
-            decorator: { $el: null }
-        }" input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
-                <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
-                    :style="{ backgroundImage: `url('${context.option.value}')` }"></div>
-                <!-- :style="{backgroundImage: `url(${context.option.value})` }"
-                    style="background-image:url('/images/image\ 22.png')" -->
-                <span class="sr-only">{{ context.option.label }}</span>
-            </template>
-        </FormKit>
 
-        <FormKit name="commande_montre" type="checkbox" label="commander ? " wrapper-class="w-full flex text-xl" />
-        <!-- <FormKit name="date_basket" type="date" label="date de commande" wrapper-class="w-full flex text-xl" /> -->
 
-        <button class="bg-bkg-dark-main" @click="deleteMontre()">Supp</button>
-    </FormKit>
+
 </template>

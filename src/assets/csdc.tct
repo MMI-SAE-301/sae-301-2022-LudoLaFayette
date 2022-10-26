@@ -1,0 +1,22 @@
+<FormKit type="form" v-model="montre" @submit="upsertMontre">
+        <!-- <FormKit name="libelle_montre" label="libellé" /> -->
+        <FormKitListColors name="ecran" label="ecran" />
+        <FormKitListColors name="boitier" label="boitier" />
+        <FormKitListColors name="bracelet" label="bracelet" />
+        <FormKit label="materiaux (fonctionne pas)" type="radio" :options="materiaux" :sections-schema="{
+            inner: { $el: null },
+            decorator: { $el: null }
+        }" input-class="peer sr-only" options-class="flex gap-1"><template #label="context">
+                <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                    :style="{ backgroundImage: `url('${context.option.value}')` }"></div>
+                <!-- :style="{backgroundImage: `url(${context.option.value})` }"
+                    style="background-image:url('/images/image\ 22.png')" -->
+                <span class="sr-only">{{ context.option.label }}</span>
+            </template>
+        </FormKit>
+
+        <FormKit name="commande_montre" type="checkbox" label="commander ? " wrapper-class="w-full flex text-xl" />
+        <!-- <FormKit name="date_basket" type="date" label="date de commande" wrapper-class="w-full flex text-xl" /> -->
+
+        <button class="bg-bkg-dark-main" @click="deleteMontre()">Supp</button>
+    </FormKit>
