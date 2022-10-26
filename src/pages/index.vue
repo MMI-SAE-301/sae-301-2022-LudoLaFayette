@@ -35,11 +35,7 @@
           Personnaliser
         </button>
       </div>
-
     </div>
-
-
-
     <div class="font-orkney font-light text-center text-common items-center  p-5 ">
       <p class="mb-5">
         Votre montre à votre image.<br />
