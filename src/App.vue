@@ -1,14 +1,14 @@
 <template>
 
-  <header class="flex bg-bkg-main-dark">
-    <div class="flex-row">
-      <div class="ml-10  ">
-        <router-link to="/"><img src="/images/logo.svg" alt="logo tik tak"></router-link>        
+  <header class="bg-bkg-main-dark sticky top-0 ">
+    <div class="flex justify-between ">
+      <div class="ml-10 p-10">
+        <router-link to="/"><img src="/images/logo.svg" alt="logo tik tak"></router-link>
       </div>
-      <nav class="text-white font-aquire">
-        <router-link to="/">Acceuil</router-link>
-        <router-link to="/">Personnalisation</router-link>
-        <router-link to="/">Connexion</router-link>
+      <nav class="font-aquire flex items-center justify-between gap-10">
+        <router-link to="/" class="text-white text-[40px]">Acceuil</router-link>
+        <router-link to="/" class="bg-white text-black text-[40px] p-2">Personnalisation</router-link>
+        <router-link to="/" class="bg-white text-black text-[40px] mr-10 p-2">Connexion</router-link>
       </nav>
     </div>
   </header>
