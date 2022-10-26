@@ -14,6 +14,9 @@ module.exports = {
         "aquire": "Aquire",
         "orkney": "Orkney"
       },
+      "backgroundImage": {
+        "main-pattern" : "url('/images/background-main.jpg')",
+      }
     },
   },
   plugins: [

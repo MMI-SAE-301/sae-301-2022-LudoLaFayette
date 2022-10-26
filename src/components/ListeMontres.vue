@@ -16,9 +16,9 @@ if (error) {
 </script>
 <template>
   <ul>
-    <li v-for="montre in montres" :key="montre.idMontre">
+    <li v-for="montre in montres" :key="montre.id_montre">
       <router-link
-        :to="{ name: 'montre-edit-id', params: { id: montre.idMontre } }"
+        :to="{ name: 'montre-edit-id', params: { id: montre.id_montre } }"
       >
         <TestMontre class="w-64" v-bind="montre" />
       </router-link>
