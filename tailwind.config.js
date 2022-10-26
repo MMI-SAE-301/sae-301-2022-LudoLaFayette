@@ -4,7 +4,17 @@ const formKitTailwind = require("@formkit/themes/tailwindcss");
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      "colors": {
+        "bkg-main-dark": "#1C1917",
+
+        // Ici vos couleurs exportées de Figma
+      },
+      "fontFamily": {
+        "aquire": "Aquire",
+        "orkney": "Orkney"
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
