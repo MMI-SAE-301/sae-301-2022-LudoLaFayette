@@ -45,20 +45,20 @@ Noté sur 40.
   - Quelles techniques (Grilles Flex...)
     - ...
   - liens
-  - [ ] Mise en page fluide
+  - [X] Mise en page fluide
 - [ ] Mobile First (0-1-2pts)
   - [ ] Plusieurs tailles
     - Lesquelles...
-- [ ] Dark Mode (0-1-2pts)
-  - [ ] Simple usage de 'dark:'
-  - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
+- [X] Dark Mode (0-1-2pts)
+  - [X] Simple usage de 'dark:'
+  - [X] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 - "tailwin.config.js" (0-1-2pts)
-  - [ ] usage basique couleurs/fonts
-  - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
+  - [X] usage basique couleurs/fonts
+  - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
     - liens
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
-  - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
+  - [X] textes "accessibles" (eg. 'sr-only')
+  - [X] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.

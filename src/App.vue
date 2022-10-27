@@ -6,7 +6,7 @@
         <router-link to="/"><img src="/images/logo.svg" alt="logo tik tak" height="100"></router-link>
       </div>
       <nav class="font-aquire flex items-center gap-10">
-        <router-link to="/" class="text-arkModeMainTextWhite text-common">Acceuil</router-link>
+        <router-link to="/" class="text-darkModeMainTextWhite text-common">Acceuil</router-link>
         <router-link to="/formmontrevue" class="bg-darkModePureWhite text-darkModeMainTextBlack text-common p-2">Personnalisation</router-link>
         <router-link to="/connexiondeconnexionvue" class="bg-darkModePureWhite text-darkModeMainTextBlack text-common mr-10 p-2">Connexion</router-link>
       </nav>
