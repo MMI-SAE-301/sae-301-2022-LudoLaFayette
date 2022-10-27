@@ -20,7 +20,7 @@ if (error) {
       <router-link
         :to="{ name: 'montre-edit-id', params: { id: montre.id_montre } }"
       >
-        <TestMontre class="w-64" v-bind="montre" />
+        <TestMontre class="w-[800px]" v-bind="montre" />
       </router-link>
     </li>
   </ul>
