@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mettre ici les styles "globaux" */
+/*Avant le dark mode*/
+:root {
+
+    --couleur-text-black: white;
+    --couleur-text-white: black;
+    --couleur-fond-white-fmr-button: black;
+    --couleur-fond-black-header-footer-button: white;
+    --couleur-fond-pure-white : black;
+
+
+
+}
+
+/*après dark mode*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --couleur-text-black: black;
+        --couleur-text-white: white;
+        --couleur-fond-white-fmr-button: #E6E9EE;
+        --couleur-fond-black-header-footer-button: #1C1917;
+        --couleur-fond-pure-white : white;
+    }
+}

@@ -8,8 +8,11 @@ module.exports = {
       "colors": {
         "bkg-main-dark": "#1C1917",
         "blancFond" : "#E6E9EE",
-        "darkModeFond" : 'var(-bkg-main-fond)',
-
+        "darkModeFondMainBlack" : "var(--couleur-fond-black-header-footer-button)",
+        "darkModeMainTextWhite" : "var(--couleur-text-white)",
+        "darkModeMainTextBlack": "var(--couleur-text-black)",
+        "darkModeFondMainWhite": "var(--couleur-fond-white-fmr-button)",
+        "darkModePureWhite" : "var(--couleur-fond-pure-white)",
 
         // Ici vos couleurs exportées de Figma
       },
