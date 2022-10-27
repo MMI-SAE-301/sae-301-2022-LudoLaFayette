@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import { ref } from "@vue/reactivity";
 import { supabase, user } from '../supabase';
+
+async function signIn(data, node) {
+    const { user, error } = await (nvlUtilisateur.value
+        ? supabase.auth.signUp(data)
+        : supabase.auth.signIn(data));
+    console.log(user, error);
+    if (error) {
+        console.error(error);
+        node.setErrors([error.message]);
+    }
+}
+const nvlUtilisateur = ref(false);
 </script>
 
 
@@ -18,8 +31,29 @@ import { supabase, user } from '../supabase';
 
 
     <div class="bg-blancFond bg-opacity-60 grid grid-rows-[7] font-orkney mt-[50px] ml-[200px] mr-[200px] pb-[-100px]">
+
+
         <p class="font-light text-common p-4">Veuillez renseigner ces champs : </p>
-        <form action="#" method="post" class="grid justify-items-start">
+        <div class="p-5 flex justify-center font-orkney ">
+            <button v-if="user" @pointerdown="supabase.auth.signOut()">
+                Se déconnecter ({{ user.email }})
+            </button>
+            <FormKit v-else type="form"
+                :submit-attrs="{ classes: { input: 'flex items-center justify-center p-8 bg-white font-[80px] ml-[250px] mb-10 mt-10' } }"
+                :submit-label="nvlUtilisateur ? 'S\'inscrire' : 'Connecter'" @submit="signIn">
+                <div class="font-bold font-common">
+                    <FormKit name="email" label="Adresse Mail :" type="email" />
+                <FormKit name="password" label="Mot de passe :" type="password" />
+                <div class="p-2 mr-[350px]">
+                    <FormKit label="Nouvel utilisateur ?" name="nvlUtilisateur" type="checkbox" v-model="nvlUtilisateur"
+                        wrapper-class="flex p-2 text-common gap-5 bg-blancFond text-black" />
+                </div>
+                </div>
+                
+
+            </FormKit>
+        </div>
+        <!-- <form class="grid justify-items-start">
             <div class="p-5">
                 <p>
                     <label for="adressM" class="my-5 mx-5 flex flex-col text-common">Adresse mail :
@@ -38,34 +72,34 @@ import { supabase, user } from '../supabase';
                     </label>
                 </p>
             </div>
-        </form>
+        </form> -->
 
 
 
-        <div class="flex items-center justify-center p-4">
+        <!-- <div class="flex items-center justify-center p-4">
             <button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
                 Connecter
             </button>
-        </div>
-        <div>
+        </div> -->
 
-            <div class="grid grid-cols-3 justify-items-center">
-                <div class="mr-[-500px] mt-[20px]">
-                    <img src="/images/OuLine.svg" alt="ligne OU" />
-                </div>
-                <div class="font-light text-[35px] text-center ">
-                    <p>Ou</p>
-                </div>
-                <div class="ml-[-500px] mt-[20px]">
-                    <img src="/images/OuLine.svg" alt="ligne OU" />
-                </div>
+        <div class="grid grid-cols-3 justify-items-center">
+            <div class="mr-[-500px] mt-[20px]">
+                <img src="/images/OuLine.svg" alt="ligne OU" />
             </div>
-
+            <div class="font-light text-[35px] text-center ">
+                <p>Ou</p>
+            </div>
+            <div class="ml-[-500px] mt-[20px]">
+                <img src="/images/OuLine.svg" alt="ligne OU" />
+            </div>
         </div>
+
+
         <div class="flex items-center justify-center p-8">
-            <router-link to="/inscriptionvue"><button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
-                S'inscrire
-            </button></router-link>
+            <router-link to="/inscriptionvue"><button
+                    class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
+                    S'inscrire
+                </button></router-link>
         </div>
 
         <div class="grid grid-cols-3 justify-items-center">

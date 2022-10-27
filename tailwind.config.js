@@ -8,6 +8,9 @@ module.exports = {
       "colors": {
         "bkg-main-dark": "#1C1917",
         "blancFond" : "#E6E9EE",
+        "darkModeFond" : 'var(-bkg-main-fond)',
+
+
         // Ici vos couleurs exportées de Figma
       },
       "fontFamily": {
