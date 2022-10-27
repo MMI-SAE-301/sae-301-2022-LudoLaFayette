@@ -21,7 +21,7 @@ const nvlUtilisateur = ref(false);
         <div class="mt-[20px] w-[323px]">
             <img src="/images/line3A.svg" alt="ligne gauche exemples acceuil">
         </div>
-        <h2 class="font-orkney italic text-[40px] text-center font-bold mb-8 ">Connexion</h2>
+        <h2 class="font-orkney italic text-[40px] text-center font-bold mb-8 text-darkModeMainTextBlack">Connexion</h2>
         <div class="mt-[20px] w-[323px]">
             <img src="/images/line3b.svg" alt="ligne droite exemples acceuil">
         </div>
@@ -33,20 +33,20 @@ const nvlUtilisateur = ref(false);
     <div class="bg-blancFond bg-opacity-60 grid grid-rows-[7] font-orkney mt-[50px] ml-[200px] mr-[200px] pb-[-100px]">
 
 
-        <p class="font-light text-common p-4">Veuillez renseigner ces champs : </p>
-        <div class="p-5 flex justify-center font-orkney ">
+        <p class="font-light text-common p-4 text-darkModeMainTextBlack">Veuillez renseigner ces champs : </p>
+        <div class="p-5 flex justify-center font-orkney text-darkModeMainTextBlack">
             <button v-if="user" @pointerdown="supabase.auth.signOut()">
                 Se déconnecter ({{ user.email }})
             </button>
             <FormKit v-else type="form"
-                :submit-attrs="{ classes: { input: 'flex items-center justify-center p-8 bg-white font-[80px] ml-[250px] mb-10 mt-10' } }"
+                :submit-attrs="{ classes: { input: 'flex items-center justify-center p-8 bg-darkModePureWhite text-darkModeMainTextBlack font-[80px] ml-[250px] mb-10 mt-10' } }"
                 :submit-label="nvlUtilisateur ? 'S\'inscrire' : 'Connecter'" @submit="signIn">
                 <div class="font-bold font-common">
                     <FormKit name="email" label="Adresse Mail :" type="email" />
                 <FormKit name="password" label="Mot de passe :" type="password" />
                 <div class="p-2 mr-[350px]">
                     <FormKit label="Nouvel utilisateur ?" name="nvlUtilisateur" type="checkbox" v-model="nvlUtilisateur"
-                        wrapper-class="flex p-2 text-common gap-5 bg-blancFond text-black" />
+                        wrapper-class="flex p-2 text-common gap-5 bg-darkModeFondMainWhite text-darkModeMainTextBlack" />
                 </div>
                 </div>
                 
@@ -86,7 +86,7 @@ const nvlUtilisateur = ref(false);
             <div class="mr-[-500px] mt-[20px]">
                 <img src="/images/OuLine.svg" alt="ligne OU" />
             </div>
-            <div class="font-light text-[35px] text-center ">
+            <div class="font-light text-[35px] text-center text-darkModeMainTextBlack">
                 <p>Ou</p>
             </div>
             <div class="ml-[-500px] mt-[20px]">
@@ -97,7 +97,7 @@ const nvlUtilisateur = ref(false);
 
         <div class="flex items-center justify-center p-8">
             <router-link to="/inscriptionvue"><button
-                    class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
+                    class=" bg-darkModePureWhite text-darkModeMainTextBlack font-orkney font-normal text-common p-5 mb-10">
                     S'inscrire
                 </button></router-link>
         </div>
@@ -106,7 +106,7 @@ const nvlUtilisateur = ref(false);
             <div class="mr-[-500px] mt-[20px]">
                 <img src="/images/OuLine.svg" alt="ligne OU" />
             </div>
-            <div class="font-light text-[35px] text-center ">
+            <div class="font-light text-[35px] text-center text-darkModeMainTextBlack">
                 <p>Ou</p>
             </div>
             <div class="ml-[-500px] mt-[20px]">
@@ -115,11 +115,11 @@ const nvlUtilisateur = ref(false);
         </div>
 
         <div class="flex items-center justify-center p-4">
-            <button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10" v-if="user"
+            <button class=" bg-darkModePureWhite text-darkModeMainTextBlack font-orkney font-normal text-common p-5 mb-10" v-if="user"
                 @pointerdown="supabase.auth.signOut()">
                 Se déconnecter ({{ user.email }})
             </button>
-            <button class="flex bg-white text-black font-orkney font-normal text-common p-5 mb-10 gap-5" v-else
+            <button class="flex bg-darkModePureWhite text-darkModeMainTextBlack font-orkney font-normal text-common p-5 mb-10 gap-5" v-else
                 @pointerdown="supabase.auth.signIn({ provider: 'google' })">
                 <img src="/images/logoGoogle.png" alt="logo google" width="40" height="40" />
                 Se connecter avec Google
@@ -130,7 +130,7 @@ const nvlUtilisateur = ref(false);
             <div class="mr-[-500px] mt-[20px]">
                 <img src="/images/OuLine.svg" alt="ligne OU" />
             </div>
-            <div class="font-light text-[35px] text-center ">
+            <div class="font-light text-[35px] text-center text-darkModeMainTextBlack">
                 <p>Ou</p>
             </div>
             <div class="ml-[-500px] mt-[20px]">
@@ -139,11 +139,11 @@ const nvlUtilisateur = ref(false);
         </div>
 
         <div class="flex items-center justify-center p-4 ">
-            <button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10 " v-if="user"
+            <button class=" bg-darkModePureWhite text-darkModeMainTextBlack font-orkney font-normal text-common p-5 mb-10 " v-if="user"
                 @pointerdown="supabase.auth.signOut()">
                 Se déconnecter ({{ user.email }})
             </button>
-            <button class="flex bg-white text-black font-orkney font-normal text-common p-5 mb-10 gap-5" v-else
+            <button class="flex bg-darkModePureWhite text-darkModeMainTextBlack font-orkney font-normal text-common p-5 mb-10 gap-5" v-else
                 @pointerdown="supabase.auth.signIn({ provider: 'facebook' })">
                 <img src="/images/logoFacebook.png" alt="logo Fb" width="40" height="40" />
 

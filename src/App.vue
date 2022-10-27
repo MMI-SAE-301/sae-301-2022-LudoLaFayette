@@ -30,7 +30,7 @@
           <router-link to="/" class="text-darkModeMainTextWhite text-common ">Connexion</router-link>
         </nav>
       </div>
-      <div class="grid text-center font-aquire text-common font-bold p-5">
+      <div class="grid text-center font-aquire text-common font-bold p-5 ">
         <h2>Nous suivre</h2>
         <div class="grid grid-cols-4 mt-[-75px] justify-items-center">
           <img src="/images/FacebookCircled.svg" alt="Facebook logo">
