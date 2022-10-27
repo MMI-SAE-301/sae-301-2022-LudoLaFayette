@@ -11,7 +11,7 @@
       <p>
         Dépêchez-vous, ca fait Tik-Tak.
       </p>
-    </div> -->
+    </div> 
 
      <img src="/images/montreAcceuil.png" alt="montre Acceuil" />
   </div>
@@ -31,7 +31,7 @@
 
   <div class="grid grid-cols-2 justify-items-center p-10 mb-[-200px]">
     <div class="grid grid-rows-2 justify-items-center p-8">
-      <img src="images/items.webp" alt="ensemble de items électroniques" height="175" width="500" />
+      <img src="/images/items.webp" alt="ensemble de items électroniques" height="175" width="500" />
       <div class="">
         <router-link to="/formmontrevue"><button
             class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 ">
@@ -101,7 +101,7 @@
       </p>
     </div>
     <div class="grid grid-rows-2 justify-items-center mb-[-200px]">
-      <img src="images/connexion.png" alt="connexion" height="300" width="425" />
+      <img src="/images/connexion.png" alt="connexion" height="300" width="425" />
       <div class="">
         <router-link to="/connexiondeconnexionvue"><button
             class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 ">

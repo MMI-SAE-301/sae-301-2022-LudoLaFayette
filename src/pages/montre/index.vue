@@ -27,7 +27,7 @@ import ListeMontres from '@/components/ListeMontres.vue'
                 </div>
             </div>
         </div>
-        <img src="images/exemple22.svg" alt="exemple statique" height="400" width="600" />
+        <img src="/images/exemple22.svg" alt="exemple statique" height="400" width="600" />
     </div>
 
 
