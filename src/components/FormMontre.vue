@@ -71,7 +71,7 @@ async function deleteMontre() {
         <div class="grid ">
         <FormKit type="form" v-model="montre" @submit="upsertMontre" submit-label="Enregistrer"
                 :submit-attrs="{ classes: { input: 'bg-darkModeFondMainBlack font-orkney font-bold text-darkModeMainTextWhite text-common p-3 ' } }">
-                <div class="grid grid-rows-5 font-orkney text-[40px] font-bold gap-10 p-2 text-darkModeMainTextBlack">
+                <div class="grid grid-rows-5 font-orkney text-[40px] font-bold gap-10 p-2 text-darkModeMainTextBlack sr-only">
                     <div class="mr-[300px] mt-[105px]">
                         <h2 class="font-orkney  text-[38px] text-right font-bold text-darkModeMainTextBlack">1. Choix des Couleurs :</h2>
                     </div>
