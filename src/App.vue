@@ -7,8 +7,10 @@
       </div>
       <nav class="font-aquire flex items-center gap-10">
         <router-link to="/" class="text-darkModeMainTextWhite text-common">Acceuil</router-link>
-        <router-link to="/formmontrevue" class="bg-darkModePureWhite text-darkModeMainTextBlack text-common p-2">Personnalisation</router-link>
-        <router-link to="/connexiondeconnexionvue" class="bg-darkModePureWhite text-darkModeMainTextBlack text-common mr-10 p-2">Connexion</router-link>
+        <router-link to="/formmontrevue" class="bg-darkModePureWhite text-darkModeMainTextBlack text-common p-2">
+          Personnalisation</router-link>
+        <router-link to="/connexiondeconnexionvue"
+          class="bg-darkModePureWhite text-darkModeMainTextBlack text-common mr-10 p-2">Connexion</router-link>
       </nav>
     </div>
   </header>
@@ -25,11 +27,12 @@
       <div class="grid text-center p-5">
         <h2 class="text-aquire text-common font-bold">Menu du site</h2>
         <nav class="grid text-center">
-          <router-link to="/" class="text-darkModeMainTextWhite text-common mt-[-30px] ">Acceuil</router-link>
-          <router-link to="/" class="text-darkModeMainTextWhite text-common ">Personnalisation</router-link>
-          <router-link to="/" class="text-darkModeMainTextWhite text-common ">Connexion</router-link>
+          <router-link to="/" class="text-darkModeMainTextWhite text-common mt-[-30px] ">Acceuil</router-link> 
+          <router-link to="/formmontrevue" class="text-darkModeMainTextWhite text-common ">Personnalisation</router-link>
+         <router-link to="/" class="text-darkModeMainTextWhite text-common">Connexion</router-link>
         </nav>
       </div>
+      
       <div class="grid text-center font-aquire text-common font-bold p-5 ">
         <h2>Nous suivre</h2>
         <div class="grid grid-cols-4 mt-[-75px] justify-items-center">
@@ -43,7 +46,7 @@
       <div class="flex-col text-center text-common">
         <h2 class="font-bold p-5">Nous contacter</h2>
 
-        <p >Tik-tak</p>
+        <p>Tik-tak</p>
         <p>
           4 place tHaradin
         </p>
@@ -57,14 +60,11 @@
           012030405
         </p>
       </div>
+
     </div>
-
-
-
   </footer>
+
 
 </template>
 
-<script setup lang="ts">
 
-</script>

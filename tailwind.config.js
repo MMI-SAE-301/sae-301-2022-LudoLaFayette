@@ -25,7 +25,8 @@ module.exports = {
       },
       "fontSize" : {
         "common" : "25px",
-        "common2" : "50px"
+        "common2" : "50px",
+        "temp" : "45px"
       }
     },
   },
