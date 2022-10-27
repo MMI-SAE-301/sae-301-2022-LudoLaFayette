@@ -3,7 +3,7 @@
 - **Nom :*Faye*
 - **Prénom :*Ludovic*
 - **URL maquette Figma:*https://www.figma.com/file/XyuiSUPDlA88ooDD3xtAWs/Maquette-Montre-SAE301?node-id=2%3A8*
-- **URL publique du site :*https://montresae303.ludovicfaye.fr*
+- **URL publique du site :*https://montresae303.ludovicfaye.fr ou https://montresae303fl.netlify.app/ ou https://montrefl.herokuapp.com/*
 - **URL projet Supabase :*https://vzjuagrbgihmdtpgrdim.supabase.co*
   - [X] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
