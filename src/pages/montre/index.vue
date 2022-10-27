@@ -4,7 +4,7 @@ import ListeMontres from '@/components/ListeMontres.vue'
 </script>
 <template>
     <div class="grid grid-cols-2 justify-items-center p-10 mb-[-20px]">
-        <div class="font-orkney font-light italic text-center text-[45px] mt-10 p-5 ">
+        <div class="font-orkney font-light italic text-center text-[45px] mt-10 p-5  text-darkModeMainTextBlack">
             <p class="mb-5">
                 Bienvenue Mr.X<br />
             </p>
@@ -16,12 +16,12 @@ import ListeMontres from '@/components/ListeMontres.vue'
             </p>
             <div class="grid grid-cols-2 justify-items-center">
                 <div class="flex items-center justify-center p-5">
-                    <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 mb-10">
+                    <button class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 mb-10">
                         Voir mes modèles
                     </button>
                 </div>
                 <div class="flex items-center justify-center p-8">
-                    <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 mb-10">
+                    <button class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 mb-10">
                         Crée un modèle
                     </button>
                 </div>
@@ -33,7 +33,7 @@ import ListeMontres from '@/components/ListeMontres.vue'
 
     <section>
         <div class="grid grid-cols-2 p-5 mt-6">
-            <h2 class="font-orkney italic font-medium text-common text-center">Vos modèles</h2>
+            <h2 class="font-orkney italic font-medium text-common text-center text-darkModeMainTextBlack">Vos modèles</h2>
             <div class="mt-5">
                 <img src="/images/line2.svg" alt="ligne2">
             </div>
