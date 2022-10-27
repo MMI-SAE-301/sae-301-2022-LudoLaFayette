@@ -3,7 +3,7 @@
         <div class="mt-[20px] w-[323px]">
             <img src="/images/line3A.svg" alt="ligne gauche exemples acceuil">
         </div>
-        <h2 class="font-orkney italic text-[40px] text-center font-bold mb-8 ">Inscription</h2>
+        <h2 class="font-orkney italic text-[40px] text-center font-bold mb-8 text-darkModeFondMainBlack">Inscription</h2>
         <div class="mt-[20px] w-[323px]">
             <img src="/images/line3b.svg" alt="ligne droite exemples acceuil">
         </div>
@@ -12,7 +12,7 @@
 
 
 
-    <div class="bg-blancFond bg-opacity-60 grid grid-rows-[7] font-orkney mt-[50px] ml-[200px] mr-[200px] pb-[-100px]">
+    <div class="bg-darkModeFondMainWhite bg-opacity-60 grid grid-rows-[7] font-orkney mt-[50px] ml-[200px] mr-[200px] pb-[-100px] text-darkModeFondMainBlack">
         <p class="font-light text-common p-4">Veuillez renseigner ces champs pour vous inscrire: </p>
         <form action="#" method="post" class="grid justify-items-start">
             <div class="p-5">
@@ -71,7 +71,7 @@
             </div>
         </form>       
         <div class="flex items-center justify-center p-8">
-            <router-link to="/montre"><button class=" bg-white text-black font-orkney font-normal text-common p-5 mb-10">
+            <router-link to="/montre"><button class=" bg-darkModePureWhite text-darkModeMainTextBlack font-orkney font-normal text-common p-5 mb-10">
                 S'inscrire
             </button></router-link>
         </div>
