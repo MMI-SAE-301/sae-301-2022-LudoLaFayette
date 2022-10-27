@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-2 justify-items-center p-10 mb-[-20px]">
-    <div class="font-orkney font-light italic text-center text-[45px] mt-10 p-5 ">
+    <div class="font-orkney font-light italic text-center text-[45px] mt-10 p-5 text-darkModeMainTextBlack">
       <p class="mb-5">
         Le temps est un précieux atout.<br />
       </p>
@@ -15,7 +15,7 @@
     <img src="images/montreAcceuil.png" alt="montre Acceuil" height="175" width="250" />
   </div>
   <div class="flex items-center justify-center p-8">
-    <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 mb-10">
+    <button class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 mb-10">
       Decouvrir
     </button>
   </div>
@@ -24,19 +24,19 @@
     <div class="ml-[80px] mt-3">
       <img src="/images/line1.svg" alt="ligne1" />
     </div>
-    <h2 class="font-orkney italic font-medium text-common text-right ml-[-30px] mt-3">Personnalisation</h2>
+    <h2 class="font-orkney italic font-medium text-common text-right ml-[-30px] mt-3 text-darkModeMainTextBlack">Personnalisation</h2>
   </div>
 
   <div class="grid grid-cols-2 justify-items-center p-10 mb-[-200px]">
     <div class="grid grid-rows-2 justify-items-center p-8">
       <img src="images/items.webp" alt="ensemble de items électroniques" height="175" width="500" />
       <div class="">
-        <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 ">
+       <router-link to="/formmontrevue"><button class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 ">
           Personnaliser
-        </button>
+        </button></router-link>
       </div>
     </div>
-    <div class="font-orkney font-light text-center text-common items-center  p-5 ">
+    <div class="font-orkney font-light text-center text-common items-center  p-5 text-darkModeMainTextBlack ">
       <p class="mb-5">
         Votre montre à votre image.<br />
       </p>
@@ -56,7 +56,7 @@
       <img src="/images/line3A.svg" alt="ligne gauche exemples acceuil">
     </div>
 
-    <h2 class="font-orkney italic font-medium text-common text-center ">Exemples de montres</h2>
+    <h2 class="font-orkney italic font-medium text-common text-center text-darkModeMainTextBlack">Exemples de montres</h2>
 
     <div class="mt-[20px]">
       <img src="/images/line3b.svg" alt="ligne droite exemples acceuil">
@@ -81,14 +81,14 @@
   </div>
 
   <div class="grid grid-cols-2 p-5 mt-6">
-    <h2 class="font-orkney italic font-medium text-common text-center">Connexion</h2>
+    <h2 class="font-orkney italic font-medium text-common text-center text-darkModeMainTextBlack">Connexion</h2>
     <div class="mt-5">
       <img src="/images/line2.svg" alt="ligne2">
     </div>
   </div>
 
   <div class="grid grid-cols-2 justify-items-center p-10 mb-[-20px]">
-    <div class="font-orkney font-light text-center text-common  ">
+    <div class="font-orkney font-light text-center text-common text-darkModeMainTextBlack  ">
       <p class="mb-5">
         Vous voulez customiser pas une seule montre, mais plusieurs dans le futur ?<br />
       </p>
@@ -99,9 +99,9 @@
     <div class="grid grid-rows-2 justify-items-center mb-[-200px]">
       <img src="images/connexion.png" alt="connexion" height="300" width="425" />
       <div class="">
-        <button class=" bg-bkg-main-dark text-white font-aquire font-medium text-common p-5 ">
+        <router-link to="/connexiondeconnexionvue"><button class=" bg-darkModeFondMainBlack text-darkModeMainTextWhite font-aquire font-medium text-common p-5 ">
           Se connecter
-        </button>
+        </button> </router-link>
       </div>
     </div>
     
