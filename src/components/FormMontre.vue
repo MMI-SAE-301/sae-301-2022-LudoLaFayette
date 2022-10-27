@@ -16,7 +16,7 @@ if (props.id) {
     let { data, error } = await supabase
         .from("montre")
         .select("*")
-        .eq("idMontre", props.id);
+        .eq("id_montre", props.id);
     if (error || !data)
         console.log("n'a pas pu charger le table montre :", error);
     else montre.value = data[0];
@@ -33,11 +33,11 @@ async function upsertMontre(dataForm, node) {
 
 
 async function deleteMontre() {
-    console.log(montre.value.idMontre)
+    console.log(montre.value.id_montre)
     const { data, error } = await supabase
         .from("montre")
         .delete()
-        .match({ idMontre: montre.value.idMontre });
+        .match({ id_montre: montre.value.id_montre });
     if (error) {
         console.error(
             "Erreur à la suppression de ",

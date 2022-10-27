@@ -1,5 +1,5 @@
 export interface Montre {
-  idMontre?: string;
+  id_montre?: string;
   ecran?: string;
   boitier?: string;
   bracelet?: string;
